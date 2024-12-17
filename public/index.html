@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Movies Collection</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <h1>Movies Collection</h1>
+      <form id="movie-form" class="form">
+         <label for="title">Title</label>
+         <input type="text" id="title" placeholder="Enter movie title" required />
+
+         <label for="director">Director</label>
+         <input type="text" id="director" placeholder="Enter director's name" required />
+
+         <label for="year">Year</label>
+         <input type="number" id="year" placeholder="Enter year of release" required />
+
+         <label for="genre">Genre</label>
+         <input type="text" id="genre" placeholder="Enter movie genre" required />
+
+         <label for="rating">Rating</label>
+         <input type="number" id="rating" step="0.1" placeholder="Enter movie rating" required />
+
+         <div class="button-group">
+            <button id="add-button" type="submit">Add Movie</button>
+            <button id="delete-all" class="delete-all-btn">Delete All Movies</button>
+         </div>
+      </form>
+ <!-- Filter and View Buttons -->
+ <div class="button-group">
+   <button id="filter-year" onclick="loadMoviesAfterYear(2018)">Filter by Year</button>
+   <button id="top3-directors" onclick="loadTopMoviesByDirector()">Top 3 Movies by Director</button>
+   <button id="filter-year" onclick="loadMovies()">Default</button>
+</div>
+<!-- Reviews Section -->
+<div id="reviews-section" class="reviews-section">
+   <h2>Reviews</h2>
+   <div id="reviews-list" class="reviews-list">
+   </div>
+</div>
+<div id="movies-list" class="movies-list"></div>
+
+
+
+   <script src="app.js"></script>
+</body>
+</html>
